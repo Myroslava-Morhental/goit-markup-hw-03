@@ -17,7 +17,8 @@ body {
 h1,
 h2,
 h3,
-p {
+p,
+button {
   margin: 0;
   padding: 0;
 }
@@ -29,9 +30,9 @@ img {
 
 .header {
   background-color: var(--primary-bg-color);
-  border: 1px solid #ececec;
-  padding-top: 24px;
-  padding-bottom: 25px;
+  border-bottom: 1px solid #ececec;
+  /* padding-top: 24px;
+  padding-bottom: 25px; */
 }
 /* Logo */
 
@@ -84,7 +85,10 @@ img {
 
 .site-nav .site-nav-item,
 .auth-nav .auth-nav-item {
-  margin-right: 50px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 .auth-nav {
   margin-left: auto;
@@ -98,9 +102,6 @@ img {
 }
 .site-nav .link,
 .auth-nav .link {
-  padding-top: 32px;
-  padding-bottom: 32px;
-
   font-size: 14px;
   font-weight: 500;
   line-height: 1.14;
@@ -130,7 +131,12 @@ img {
 .hero-section {
   text-align: center;
   padding-top: 200px;
-  padding-bottom: 280px;
+  padding-bottom: 200px;
+}
+.hero-title {
+  max-width: 696px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hero-section,
@@ -151,10 +157,11 @@ img {
 .hero-button {
   display: inline-block;
   padding: 10px 32px;
+  border: 0;
+  border-radius: 4px;
 
   color: var(--white-text-color);
   background-color: var(--accent-color);
-  border-radius: 4px;
   min-width: 200px;
 }
 
@@ -210,10 +217,11 @@ section {
 
 /* Team section */
 
-/* .section-team {
+.section-team {
   padding-top: 94px;
   padding-bottom: 94px;
-} */
+  margin-bottom: 0;
+}
 .section-team {
   background-color: var(--grey-bg-color);
 }
@@ -228,8 +236,8 @@ section {
   margin-right: 30px;
   flex-basis: calc(100% / 4 - 30px);
   text-align: center;
+  background-color: #ffffff;
 }
-
 .section-team-list .section-subtitle {
   margin-top: 30px;
 
@@ -274,8 +282,9 @@ section {
 /* Portfolio buttons*/
 .button {
   color: var(--secondary-text-color);
-  background-color: var(--team-bg-color);
+  background-color: var(--grey-bg-color);
   border-radius: 4px;
+  border: 0;
   padding: 6px 22px;
   font-size: 16px;
   font-weight: 500;
@@ -283,7 +292,8 @@ section {
   cursor: pointer;
 }
 .button:hover,
-.button:focus {
+.button:focus,
+.button:active {
   color: var(--white-text-color);
   background-color: var(--accent-color);
 }
@@ -299,12 +309,20 @@ section {
 .section-projects {
   margin-top: 94px;
 }
+.all-projects-item .projects-card {
+  padding-top: 20px;
+  padding-left: 24px;
+  padding-right: 24px;
+
+  border-left: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+}
+
 .section-projects-text {
   color: var(--primary-text-color);
 }
 .section-projects .section-subtitle {
-  margin-top: 20px;
-
   font-size: 18px;
   font-weight: 700;
   line-height: 2;
